@@ -284,31 +284,58 @@
   <section>
     <h2>Join the beta</h2>
     <p>
-      We’re building Lounge Lyzard with early travelers first.
-      If this feels like your kind of tool, join the list and follow along.
+      We're building Lounge Lyzard with frequent travelers first.
+      If this sounds useful, request early access and follow along as the beta launches.
     </p>
 
-    <div class="signup-box">
-      <p>
-        Start with a simple beta signup form collecting:
-      </p>
-      <ul>
-        <li>Email</li>
-        <li>Home airport</li>
-        <li>Primary airline</li>
-        <li>Flights per year</li>
-      </ul>
+<div class="signup-box">
+  <p>
+    Early testers help shape the product.
+    Request early access and follow along as we build the beta.
+  </p>
 
-      <a class="button" href="#" target="_blank">Beta Signup</a>
+  <p>
+    No spam. Just occasional updates as we build the beta.
+  </p>
 
-      <p class="small">
-        Replace the button link with your Google Form, Tally form, or email signup link.
-      </p>
-    </div>
+  <iframe
+    data-tally-src="https://tally.so/embed/KYozdM?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+    loading="lazy"
+    width="100%"
+    height="1034"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0"
+    title="Lounge Lyzard Beta">
+  </iframe>
 
-    <p class="footer">
-      Built by a normal dude who travels a lot. The initial release will serve ATL.
-    </p>
+  <script>
+    var d = document,
+        w = "https://tally.so/widgets/embed.js",
+        v = function() {
+          if (typeof Tally !== "undefined") {
+            Tally.loadEmbeds();
+          } else {
+            d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) {
+              e.src = e.dataset.tallySrc;
+            });
+          }
+        };
+    if (typeof Tally !== "undefined") {
+      v();
+    } else if (d.querySelector('script[src="' + w + '"]') == null) {
+      var s = d.createElement("script");
+      s.src = w;
+      s.onload = v;
+      s.onerror = v;
+      d.body.appendChild(s);
+    }
+  </script>
+</div>
+
+<p class="footer">
+  Built by a normal dude who travels a lot.  Starting at ATL.
+</p>
   </section>
 
 </body>
