@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lounge Lyzard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+padding:60px;
+}
+
+h1{
+font-size:48px;
+}
+
+p{
+font-size:20px;
+max-width:600px;
+margin:auto;
+}
+
+button{
+margin-top:30px;
+padding:15px 25px;
+font-size:18px;
+background:#22c55e;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🦎 Lounge Lyzard</h1>
+
+<p>
+Stop sprinting across airports for nothing.
+<br><br>
+Lounge Lyzard predicts your connection so you know when to run — and when to stay in the lounge.
+</p>
+
+<button>Join the Beta</button>
+
+<p style="margin-top:40px;font-size:14px;">
+Built by a frequent traveler starting at ATL.
+</p>
+
+</body>
+</html>
