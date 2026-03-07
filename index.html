@@ -4,177 +4,226 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lounge Lyzard</title>
-
+  <meta name="description" content="Lounge Lyzard is currently under maintenance.">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0b1220;
-      color: white;
-      text-align: center;
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#0b1220;
+      color:white;
+      min-height:100vh;
+      overflow:hidden;
     }
 
-    section {
-      padding: 80px 20px;
-      max-width: 1000px;
-      margin: auto;
+    .hero{
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:40px 20px;
+      box-sizing:border-box;
     }
 
-    .hero {
-      padding-top: 120px;
-      padding-bottom: 120px;
+    .bg-video{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:.22;
     }
 
-    h1 {
-      font-size: 56px;
-      margin-bottom: 20px;
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(to bottom, rgba(11,18,32,.70), rgba(11,18,32,.88));
     }
 
-    h2 {
-      font-size: 38px;
-      margin-bottom: 15px;
+    .content{
+      position:relative;
+      z-index:2;
+      max-width:760px;
+      width:100%;
     }
 
-    p {
-      font-size: 20px;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto 18px auto;
-      opacity: 0.9;
+    h1{
+      font-size:58px;
+      margin:0 0 18px 0;
+      line-height:1.05;
     }
 
-    .video {
-      margin-top: 40px;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    p{
+      font-size:22px;
+      line-height:1.6;
+      margin:0 auto 18px auto;
+      max-width:680px;
+      opacity:.95;
     }
 
-    video {
-      width: 100%;
-      display: block;
+    .sub{
+      font-size:16px;
+      opacity:.72;
+      margin-top:28px;
     }
 
-    .mockup {
-      margin-top: 40px;
+    .gate-box{
+      margin:40px auto 0 auto;
+      max-width:520px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      padding:28px 24px;
+      box-shadow:0 20px 40px rgba(0,0,0,.35);
+      backdrop-filter: blur(6px);
     }
 
-    .mockup img {
-      max-width: 320px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      border-radius: 18px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    .gate-box h2{
+      margin:0 0 18px 0;
+      font-size:26px;
     }
 
-    button {
-      margin-top: 40px;
-      padding: 16px 34px;
-      font-size: 18px;
-      background: #22c55e;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
+    .form-row{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
     }
 
-    button:hover {
-      background: #16a34a;
+    input{
+      width:260px;
+      max-width:100%;
+      padding:14px 16px;
+      font-size:16px;
+      border-radius:10px;
+      border:none;
+      outline:none;
+      background:#f8fafc;
+      color:#111827;
+      box-sizing:border-box;
     }
 
-    .divider {
-      height: 1px;
-      background: rgba(255, 255, 255, 0.1);
-      margin: 100px 0;
+    button{
+      padding:14px 24px;
+      font-size:16px;
+      font-weight:bold;
+      border:none;
+      border-radius:10px;
+      cursor:pointer;
+      background:#22c55e;
+      color:white;
     }
 
-    .footer {
-      font-size: 14px;
-      opacity: 0.6;
-      margin-top: 60px;
+    button:hover{
+      background:#16a34a;
+    }
+
+    #msg{
+      min-height:22px;
+      margin-top:16px;
+      font-size:15px;
+      opacity:.88;
+    }
+
+    .hint{
+      margin-top:12px;
+      font-size:13px;
+      opacity:.55;
+    }
+
+    @media (max-width:700px){
+      h1{
+        font-size:42px;
+      }
+
+      p{
+        font-size:19px;
+      }
+
+      .gate-box{
+        padding:22px 18px;
+      }
+
+      .form-row{
+        flex-direction:column;
+      }
+
+      input{
+        width:100%;
+      }
+
+      button{
+        width:100%;
+      }
     }
   </style>
 </head>
-
 <body>
 
   <section class="hero">
-    <h1>🦎 Lounge Lyzard</h1>
+    <video class="bg-video" autoplay muted loop playsinline preload="none">
+      <source src="video3_lounge.mp4" type="video/mp4">
+    </video>
 
-    <div class="divider"></div>
+    <div class="overlay"></div>
 
-    <div class="mockup">
-      <img src="Relax.png" alt="Lounge Lyzard early app preview" />
+    <div class="content">
+      <h1>🦎 Lounge Lyzard</h1>
+
+      <p>
+        The Lyzard is currently relaxing in the lounge while we make a few upgrades.
+      </p>
+
+      <p>
+        We’ll be back shortly.
+      </p>
+
+      <div class="gate-box">
+        <h2>Private Preview Access</h2>
+
+        <div class="form-row">
+          <input
+            type="password"
+            id="pw"
+            placeholder="Enter preview password"
+            autocomplete="off"
+          >
+          <button onclick="checkPassword()">Enter</button>
+        </div>
+
+        <div id="msg"></div>
+        <div class="hint">Preview access is for development only.</div>
+      </div>
+
+      <p class="sub">
+        Built by a frequent traveler starting at ATL.
+      </p>
     </div>
-
-    <div class="divider"></div>
-
-    <h2>Stop sprinting across airports for no reason!</h2>
-
-    <div class="video">
-      <video autoplay muted loop playsinline>
-        <source src="Panic.mp4" type="video/mp4" />
-      </video>
-    </div>
-
-    <p>You land and decide to grab a drink.</p>
-    <p>Minutes before you plan to leave, you're notified that your gate has changed and it's on the other side of the airport!</p>
-    <p>The clock is ticking, and the airport suddenly feels enormous.</p>
-    <p>So you do what every traveler has had to do - you run.</p>
   </section>
 
-  <div class="divider"></div>
+  <script>
+    function checkPassword() {
+      var pw = document.getElementById("pw").value.trim();
+      var msg = document.getElementById("msg");
 
-  <section>
-    <h2>The Gate Reality</h2>
+      if (pw === "lyzard") {
+        window.location.href = "/dev.html";
+      } else if (pw.length === 0) {
+        msg.innerText = "Enter the preview password.";
+      } else {
+        msg.innerText = "Incorrect password.";
+      }
+    }
 
-    <div class="video">
-      <video autoplay muted loop playsinline>
-        <source src="Delay.mp4" type="video/mp4" />
-      </video>
-    </div>
-
-    <p>You finally reach the gate... only to discover the flight is delayed!</p>
-    <p>All that stress.</p>
-    <p>All that running.</p>
-    <p>Being sweaty on a plane...</p>
-    <p>For nothing.</p>
-  </section>
-
-  <div class="divider"></div>
-
-  <section>
-    <h2>There’s a Smarter Way</h2>
-
-    <div class="video">
-      <video autoplay muted loop playsinline>
-        <source src="Relax.mp4" type="video/mp4" />
-      </video>
-    </div>
-
-    <p>Lounge Lyzard analyzes your connection in real time so you know exactly when it's time to move.</p>
-    <p>Until then, stay comfortable.</p>
-    <p>Enjoy the lounge.</p>
-    <p>Have another well-earned drink.</p>
-    <p>Let those who don't know do the running.</p>
-    <p>The Lyzard's got your back.</p>
-
-    <div style="margin-top: 40px;">
-      <p>Stop sprinting across airports for nothing.</p>
-      <p>Lounge Lyzard predicts your connection so you know when to run - and when to stay in the lounge.</p>
-    </div>
-
-    <a href="about.html">
-      <button>See How It Works</button>
-    </a>
-
-    <p class="footer">
-      Built by a normal dude who travels a lot. The initial release will serve ATL.
-    </p>
-  </section>
+    document.getElementById("pw").addEventListener("keydown", function(e){
+      if(e.key === "Enter"){
+        checkPassword();
+      }
+    });
+  </script>
 
 </body>
 </html>
-
